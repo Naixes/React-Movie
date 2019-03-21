@@ -1,7 +1,9 @@
 import React from 'react'
 
+// 引入路由
 import { Route, Link, Switch } from 'react-router-dom'
 
+// 引入AntDesign组件
 import { Layout, Menu } from 'antd'
 const { Content, Sider } = Layout
 
@@ -29,7 +31,7 @@ export default class Movie extends React.Component {
       </Sider>
       <Layout style={{ paddingLeft: '1px', background: '#fff' }}>
         <Content style={{ background: '#fff', padding: 10, margin: 0, minHeight: 280 }}>
-          {/* switch匹配到一个后不再匹配 */}
+          {/* switch匹配到一个后不再匹配，exact会从上到下依次匹配 */}
           <Switch>
             <Route path='/movie/detail/:id' component={MovieInfo}></Route>
             <Route path='/movie/:type/:page' component={MovieList}></Route>

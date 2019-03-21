@@ -1,5 +1,6 @@
 import React from 'react'
 
+// 引入第三方包
 import fetchJSONP from 'fetch-jsonp'
 
 import { Button, Icon, Spin, Alert } from 'antd'
@@ -13,6 +14,7 @@ export default class MovieInfo extends React.Component {
     }
   }
 
+  // 请求数据
   componentWillMount() {
     fetchJSONP('http://api.douban.com/v2/movie/subject/' + this.props.match.params.id)
     .then(res => res.json())
@@ -34,6 +36,7 @@ export default class MovieInfo extends React.Component {
     </div>
   }
 
+  // 返回列表页面
   goback = () => {
     this.props.history.go(-1)
   }
@@ -52,7 +55,7 @@ export default class MovieInfo extends React.Component {
         {/* {console.log(this.state.info)} */}
         <div style={{textAlign: 'center'}}>
           <h2 style={{}}>{this.state.info.title}</h2>
-          <img src={this.state.info.images.large.replace('img7', 'img1')} alt=""/>
+          <img src={this.state.info.images.large.replace('img7', 'img3')} alt=""/>
         </div>
         <p style={{textIndent: '2em', lineHeight: '30px'}}>{this.state.info.summary}</p>
       </div>

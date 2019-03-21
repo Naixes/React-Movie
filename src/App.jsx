@@ -4,6 +4,9 @@
 import React from 'react'
 
 // 导入路由
+// HashRouter 包裹需要添加路由的组件
+// Route 路由规则，占位
+// Link 路由跳转
 import { HashRouter, Route, Link } from 'react-router-dom'
 
 // 引入antd布局组件

@@ -19,6 +19,7 @@ export default class MovieItem extends React.Component {
         <h5>上映年份：{this.props.year}年</h5>
         <h5>电影类型：{this.props.genres.join(',')}</h5>
       </div>
+      {/* 评分组件 */}
       <div className="rate">
         <Rate disabled defaultValue={this.props.rating.average/2} />
       </div>
